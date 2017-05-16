@@ -13,7 +13,7 @@ public:
      //            solution.push_back(i);
      //        }
      //    }
-     //    return solution;
+     //    return solution
     	vector<int> result;
     	for (int i = 0; i < int(nums.size()); ++i) {
     		// if the content has been modified to negative, it means its index puls 1 has been visited
