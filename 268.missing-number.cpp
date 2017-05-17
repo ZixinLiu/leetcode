@@ -29,11 +29,7 @@ public:
     	for (int i = 0; i < int(nums.size()); ++i) {
     		nums_sum += nums[i];
     	}
-    	if(sum - nums_sum == 0) {
-    		return 0;
-    	} else {
     		return sum - nums_sum;
-    	}
     }
     // OTHER METHOD : BIT MANIPULATION ---SAVE FOR LATER
 
