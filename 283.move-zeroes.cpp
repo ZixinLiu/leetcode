@@ -39,7 +39,7 @@ public:
         }
     
         
-        while(zero_idx < int(nums.size()) && non_zero_idx < int(nums.size()) && zero_idx < non_zero_idx) {
+        while(zero_idx < int(nums.size()) && non_zero_idx < int(nums.size())) {
             swap(nums[zero_idx], nums[non_zero_idx]);
             
             while(nums[non_zero_idx] == 0) {
