@@ -12,6 +12,8 @@ public:
             }
         }
          return result;
+         // underlying array is 1,2,3,4,5...., given array can be treated as the index of underlying array
+         // we should push the index to the result, which is one of the element in the given array.
     }
 };
 
