@@ -19,16 +19,35 @@ public:
     	TreeNode * left = lowestCommonAncestor(root -> left, p, q);
     	TreeNode * right = lowestCommonAncestor(root -> right, p, q);
     	
-    	// if find p q in current tree, but root is not p, q return root;
+    	// p, q one is in the left subtree and one is in the right subtree
     	if(left && right) return root;
 
-    	// if could not find lca in left, then both q,p in the right, return right, vice versa.
+    	// if one of the left and right is nullptr, means the pq, appear in the same side, directly return that side
     	if(left == nullptr) {
     		return right;
     	} else {
     		return left;
     	}
     }
+
+    // better version
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+       if (!root || p == root || q == root) return root;
+       TreeNode *left = lowestCommonAncestor(root->left, p, q);
+       // not nullptr : case 1 : find one of the p, q ,left point to one of them, or they find the lca
+       // this condition means the lca
+       if (left && left != p && left != q) return left;
+
+       TreeNode *right = lowestCommonAncestor(root->right, p , q);
+       if (right && right != p && right != q) return right;
+
+
+       if (left && right) return root;
+       return left ? left : right;
+    }
+};
+
+
 
 	
 };
