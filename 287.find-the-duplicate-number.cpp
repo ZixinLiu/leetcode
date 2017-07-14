@@ -13,7 +13,8 @@ public:
     	// 	}
     	// }
     	// return res;
-
+    	// refer 142, it must have cycle, they node is the integer slow and fast jump to, 
+    	// since it has duplicate, it must have cycle.
     	int slow = nums[0];
     	int fast = nums[0];
     	int curhead = nums[0];
