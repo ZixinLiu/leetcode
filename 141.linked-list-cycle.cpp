@@ -9,6 +9,12 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
+
+    	// prove that if there is a cycle in the linked list, they must meet
+    	// there will not be the case that l2 next step is one step forwards than l1
+    	// because they must meet before.
+
+    	// one is move 1 step forwards, one is move 2 steps forwards
         ListNode * l1 = head;
         ListNode * l2 = head;
         if(head == nullptr) return false;
