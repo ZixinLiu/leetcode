@@ -7,6 +7,14 @@
  *     Interval(int s, int e) : start(s), end(e) {}
  * };
  */
+// another version of comparator, which should be defined out of the class
+// inside the class is wrong
+bool comparison (Interval i, Interval j) { return i.start < j.start; }
+// function call
+sort(intervals.begin(), intervals.end(), comparison);
+
+
+
 class Solution {
 public:
 	// sort interval according their start in increasing order
